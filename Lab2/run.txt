@@ -1,0 +1,5 @@
+nasm -f bin code.asm -o mbr.bin
+qemu-img create hd.img 10m
+dd if=mbr.bin of=hd.img bs=512 count=1 seek=0 conv=notrunc
+qemu-system-i386 -hda hd.img -serial null -parallel stdio 
+
