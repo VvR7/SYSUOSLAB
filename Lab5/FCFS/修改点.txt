@@ -1,0 +1,8 @@
+program_exit()中:
+有就绪线程就调度
+    if (!programManager.readyPrograms.empty())
+    {
+        programManager.schedule();
+    }
+
+set_up()中，每个线程结束时都调用program_exit()
