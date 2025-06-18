@@ -1,0 +1,6 @@
+nasm -o mbr.o -g -f elf32 mbr.asm 
+ld -o mbr.symbol -melf_i386 -N mbr.o -Ttext 0x7c00
+ld -o mbr.bin -melf_i386 -N mbr.o -Ttext 0x7c00 --oformat binary
+nasm -o bootloader.o -g -f elf32 bootloader.asm 
+ld -o bootloader.symbol -melf_i386 -N bootloader.o -Ttext 0x7e00
+ld -o bootloader.bin -melf_i386 -N bootloader.o -Ttext 0x7e00 --oformat binary
