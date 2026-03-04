@@ -1,5 +1,7 @@
 # 2025年春季中山大学OS实验
 cpf老师实验班
+![](pic/score.jpg)
+
 环境配置：配置Linux虚拟机，或在Windows下配置WSL2
 # 目录
 - [Lab1:配置环境](#Lab1)
